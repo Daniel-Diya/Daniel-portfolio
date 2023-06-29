@@ -87,7 +87,29 @@ console.log(
 //   }
 // });
 
+const see_more = document.querySelectorAll(".see_more_profession");
+console.log(see_more);
+const more = document.querySelectorAll('.more')
 
+see_more.forEach((see) => see.addEventListener("click", function () {
+  console.log(see);
+  
+  for (let i = 0; i < more.length; i++)
+if (i < more[i].length- 1) {
+  more[i].textContent = 'Less';
+}
+}));
 
+// if (index < objects.length - 1) {
+//   objects[index + 1].classList.add('active');
+// }
+
+// for (let i = 0; i < see_more.length; i++)
+// for (let i = 0; i < more.length; i++)
+// console.log(see_more[i]); {
+// see_more[i].addEventListener('click', function(){
+// more[i].textContent = 'Less'
+// })
+// }
 
 
