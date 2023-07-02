@@ -250,7 +250,7 @@ font-weight: 900;
 }
 .imgskill img{
     cursor: pointer;
-    width: 90%;
+    width: 100%;
 }
 .subskills {
     color: var(--grey-2, #818181);
@@ -283,7 +283,7 @@ line-height: 26px;
     cursor: pointer;
 }
 .skill1 {
-  width: 100%;
+  width: 400px;
 }
 /* projects */
 
@@ -938,9 +938,13 @@ display: block;
 .headerprojects h1 {
   font-size: 24px;
 }
+.header-contact h1 {
+  font-size: 24px;
+}
 .headerskills h1 {
   font-size: 24px;
 }
+
   }
 
   @media only screen and (max-width: 460px)  {
@@ -986,7 +990,9 @@ margin: 0 auto;
 margin-top: 2em;
 margin-left: 2em;
 }
-
+.header-contact h1 {
+  font-size: 24px;
+}
   }
   @media only screen and (max-width: 375px) {
     .hero1 h1 {
@@ -1006,4 +1012,6 @@ font-style: normal;
 font-weight: 400;
 line-height: 28px;
     }
+
   }
+ 

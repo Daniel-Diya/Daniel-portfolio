@@ -89,16 +89,18 @@ console.log(
 
 const see_more = document.querySelectorAll(".see_more_profession");
 console.log(see_more);
-const more = document.querySelectorAll('.more')
+const more = document.querySelectorAll(".more");
 
-see_more.forEach((see) => see.addEventListener("click", function () {
-  console.log(see);
-  
-  for (let i = 0; i < more.length; i++)
-if (i < more[i].length- 1) {
-  more[i].textContent = 'Less';
-}
-}));
+see_more.forEach((see) =>
+  see.addEventListener("click", function () {
+    console.log(see);
+
+    for (let i = 0; i < more.length; i++)
+      if (i < more[i].length - 1) {
+        more[i].textContent = "Less";
+      }
+  })
+);
 
 // if (index < objects.length - 1) {
 //   objects[index + 1].classList.add('active');
@@ -112,21 +114,20 @@ if (i < more[i].length- 1) {
 // })
 // }
 // hamburger menu
-const hamburger = document.querySelector('.header__main-ham-menu')
-const close = document.querySelector('.header__main-ham-menu-close')
-const links = document.querySelector('.links_item')
+const hamburger = document.querySelector(".header__main-ham-menu");
+const close = document.querySelector(".header__main-ham-menu-close");
+const links = document.querySelector(".links_item");
 
-
-hamburger.addEventListener('click', function(){
-  close.style.display ='block';
-  links.style.display = 'block';
-  hamburger.style.display = 'none'
-})
-close.addEventListener('click', function(){
-  close.style.display ='none';
-  links.style.display = 'none';
-  hamburger.style.display = 'block'
-})
+hamburger.addEventListener("click", function () {
+  close.style.display = "block";
+  links.style.display = "block";
+  hamburger.style.display = "none";
+});
+close.addEventListener("click", function () {
+  close.style.display = "none";
+  links.style.display = "none";
+  hamburger.style.display = "block";
+});
 // links.addEventListener('click', function(){
 //   if (close.style.display = 'block') {
 //     links.style.display = 'none';
@@ -135,12 +136,15 @@ close.addEventListener('click', function(){
 //   }
 // })
 
-
-const button = document.querySelector('.contact_send')
+const button = document.querySelector(".contact_send");
 console.log(button);
-const textarea_contact = document.querySelector('.contact_message')
+const textarea_contact = document.querySelector(".contact_message");
 console.log(textarea_contact.textContent);
-button.addEventListener('click', function(e){
-e.preventDefault()
-
-})
+console.log(
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (textarea_contact === "") {
+  console.log(  textarea_contact.style.border = "2px solid red");
+  console.log(error);
+  } 
+}));
