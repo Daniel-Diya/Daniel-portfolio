@@ -635,14 +635,17 @@ margin-right: 1em;
     }
   }
   
-
+.send_of_contact {
+  position: relative;
+}
 
 
   .contact_send {
     float: right;
     margin-right: 15.9em;
-    transform: translateY(-60px);
-    z-index: 1;
+    position: absolute;
+    top: -60px;
+    right: 0;
   }
   @media only screen and (max-width: 1250px) {
     .contact_send {
@@ -652,8 +655,7 @@ margin-right: 1em;
   padding: 1em 2em;
   color: var(--grey3);
   position: absolute;
-  top: -5em;
-  left: 72%;
+  margin-right: 12em;
   cursor: pointer;
   }
   .daniel_Image {
@@ -773,6 +775,7 @@ padding-bottom: 1rem;
 .daniel_Image {
 width: 100%;
 }
+
   }
   @media only screen and (max-width: 970px) {
     .Hero {
