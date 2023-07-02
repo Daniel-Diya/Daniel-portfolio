@@ -10,6 +10,7 @@
       type="image/png"
       href="/images/unsplash_qiMCJHg2vTI.jpg"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
     <div class="WholeBody">
@@ -48,7 +49,7 @@
 
       <div class="Hero scrollchange" id="Home" >
         <!-- HERO -->
-        <div class="hero1">
+        <div class="hero1" data-aos="fade-right">
           <div class="name">
             <h1 class="Daniel">Hi I’m Daniel Diya</h1>
             <p class="job">Product Designer | Brand Designer</p>
@@ -73,7 +74,7 @@
             </div>
           </div>
         </div>
-        <div class="hero2_IMG">
+        <div class="hero2_IMG"data-aos="zoom-in">
           <div class="daniel_Image">
             <img src="/images/unsplash_qiMCJHg2vTI.svg" alt="DanielDiya" />
           </div>
@@ -83,13 +84,13 @@
       <!-- SKILLS OFFERED -->
       <div class="Skills scrollchange" id="skills">
         <div class="skilled">
-          <div class="headerskills">
+          <div class="headerskills" data-aos="fade-down">
             <h1 class="textSkills">Skills I Offer</h1>
             <p class="subskills">
               Here are some of the skills I can offer as a service.
             </p>
           </div>
-          <div class="the_skills">
+          <div class="the_skills"  data-aos="fade-right">
             <div class="skill1">
               <div class="imgskill">
                 <img src="/images/Rectangle 17.svg" alt="design thinking" />
@@ -115,7 +116,7 @@
               <p class="title_skill">User Research</p>
             </div> -->
           </div>
-          <div class="see_more">
+          <div class="see_more" >
             <p class="see_more_profession">See <span class="more">More</span></p>
             <img src="/images/Vector.svg" alt="arrow" />
           </div>
@@ -123,11 +124,11 @@
       </div>
       <!-- Projects worked on -->
       <div class="projects scrollchange" id="projects" >
-        <div class="headerprojects">
+        <div class="headerprojects" data-aos="fade-down">
           <h1>Projects Worked On</h1>
           <p>Here are some of the projects i have worked on over the years</p>
         </div>
-        <div class="the-projects">
+        <div class="the-projects" data-aos="fade-right">
           <div class="project1">
             <div class="img_project">
               <img src="/images/Patient module 1.png" alt="" />
@@ -156,7 +157,7 @@
               </div>
             </div> -->
         </div>
-        <div class="see_more MORE-PROJECT">
+        <div class="see_more MORE-PROJECT" >
           <p class="see_more_profession">See <span class="more">More</span></p>
           <img src="/images/Vector.svg" alt="arrow" />
         </div>
@@ -164,11 +165,11 @@
       <!-- Services -->
 
       <div class="services scrollchange " id="services">
-        <div class="header-services">
+        <div class="header-services"  data-aos="fade-down">
           <h1>Services Rendered</h1>
           <p>These are some examples of the services offered</p>
         </div>
-        <div class="the-services">
+        <div class="the-services"  data-aos="fade-right">
           <div class="service1">
             <div class="img-service">
               <img src="/images/Rectangle 17.svg" alt="product" />
@@ -194,7 +195,7 @@
                  </div>
                  /div> -->
         </div>
-        <div class="see_more MORE-SERVICES">
+        <div class="see_more MORE-SERVICES" >
           <p class="see_more_profession">See <span class="more">More</span></p>
           <img src="/images/Vector.svg" alt="arrow" />
         </div>
@@ -203,14 +204,15 @@
       <!-- CONTACT -->
 
       <div class="contact scrollchange" id="contact">
-        <div class="header-contact">
+        <div class="header-contact"  data-aos="fade-up">
           <h1>Contact me</h1>
           <p>
             You can reach out to us through any of these social platforms or
             contacts
           </p>
         </div>
-        <form action="">
+        <figcaption  >
+        <form class="formsend" action=""  >
           <div class="input-contact">
             <main>
               <textarea
@@ -242,6 +244,7 @@
             ><img src="/images/Email Icon.svg" alt="Email"
           /></a>
         </div>
+      </figcaption>
       </div>
 
       <!-- pop up reach -->
@@ -263,6 +266,7 @@
                     aria-placeholder="What message would you like to drop for me?"
                   >
                   </textarea>
+                  
                   <div class="btn-send">
                     <button class="send_input btn-reach-out">Send</button>
                   </div>
@@ -289,6 +293,16 @@
     </div>
 
     <script src="/scripts/script.js"></script>
+    <script src="JS/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+    once: false, 
+    delay: 0,
+  
+  });
+</script>
   </body>
 </html>
 
