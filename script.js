@@ -104,14 +104,14 @@ if (i < more[i].length- 1) {
 //   objects[index + 1].classList.add('active');
 // }
 
-// for (let i = 0; i < see_more.length; i++)
+// for (et i = 0; i < see_more.length; i++)
 // for (let i = 0; i < more.length; i++)
 // console.log(see_more[i]); {
 // see_more[i].addEventListener('click', function(){
 // more[i].textContent = 'Less'
 // })
 // }
-
+// hamburger menu
 const hamburger = document.querySelector('.header__main-ham-menu')
 const close = document.querySelector('.header__main-ham-menu-close')
 const links = document.querySelector('.links_item')
@@ -137,5 +137,10 @@ close.addEventListener('click', function(){
 
 
 const button = document.querySelector('.contact_send')
-
 console.log(button);
+const textarea_contact = document.querySelector('.contact_message')
+console.log(textarea_contact.textContent);
+button.addEventListener('click', function(e){
+e.preventDefault()
+
+})
