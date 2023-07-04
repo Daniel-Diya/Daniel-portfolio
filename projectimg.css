@@ -1,0 +1,103 @@
+.project1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .img_project img {
+    filter: blur(0px);
+    transition: filter 0.5s ease;
+  }
+  
+  .title_project {
+    color: white;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 2px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .title_project h2 {
+    font-family: Jost;
+font-size: 29px;
+font-weight: 500;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: center;
+
+  }
+  .title_project p {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0em;
+   
+    
+text-align: center;
+
+  }
+  .project1:hover .overlay-image {
+    opacity: 1;
+  }
+  .project1:hover img {
+    filter: blur(8);
+    background: linear-gradient(rgba(232, 209, 209, 0.248), rgba(255, 247, 247, 0.138));
+    transition: filter 0.5s ease;
+  }
+  
+  .project1:hover .title_project {
+    opacity: 1;
+    
+  }
+
+
+  .the-projects img {
+    width: 100%;
+    height: 100%;
+
+  }
+  .project1 {
+    margin: 0em 2em;
+  }
+
+  @media only screen and (max-width: 700px)  {
+    .title_project h2 {
+        font-family: Jost;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+      }
+      .title_project p {
+        font-family: Jost;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 15px;
+        letter-spacing: 0em;
+       
+        
+    text-align: center;
+    
+      }
+      .project1 {
+        margin: 0em;
+      }
+  }

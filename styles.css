@@ -149,7 +149,7 @@ font-size: 20px;
 font-family: Jost;
 line-height: 36px;
 }
-.btnreach_Cv{
+.btn__Cv{
     margin-top: 2em;
 }
 .ButtonReach button {
@@ -420,9 +420,12 @@ margin-right: 5em;
 ontact */
 .contact {
     margin-top: 8em;
-    margin-left: 12rem;
-    margin-right: 5rem;
+    /* margin-left: 12rem;
+    margin-right: 5rem; */
+    margin-right: 10em;
+    margin-left: 10em;
 }
+
 .message {
 background-color: var(--backgroundinput);
 border: 2px solid var(--backgroundinput);
@@ -437,7 +440,9 @@ font-size: 18px;
 font-family: Jost;
 font-weight: 300;
 }
-
+.contact_message {
+  width: 100%;
+}
 .input-contact::placeholder {
     color: #B8B8B8;
     font-size: 18px;
@@ -458,15 +463,25 @@ font-weight: 500;
 /* .btn-send {
     position: relative;
 } */
+.btn-send-reach {
+  align-self: flex-end;
+  justify-self: end;
+  margin-right: 6%;
+  transform: translateY(-3.3em);
+}
 .send_input {
     border-radius: 6px;
 background: #1A3542;
 border: 2px solid #1A3542;
 padding: 1em 2em;
 color: var(--grey3);
-
 cursor: pointer;
 transition: background-color 0.3s;
+/* float: right;
+position: absolute;
+left: 75%;
+transform: translateY(-55px); */
+
 }
 .send_input:hover{
   background-color: var(--blue);
@@ -475,12 +490,12 @@ transition: background-color 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15em;
+
 }
 .socials a {
     background-color: var(--backgroundinput);
     margin: 0.5em;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 50%;
 }
 
@@ -534,14 +549,32 @@ justify-content: center;
 align-items: center;
 margin: 0 auto;
 margin-right: 0em;
-transform: translateX(70px);
+margin-top: 0EM;
 }
 .REACH-OUT-NOW {
     width: 50%;
     margin-left: 0rem;
     background-color: var(--backgroundinput);
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+z-index: 100;
+position: fixed;
+display: none;
 } 
-.container-reach {
+.message_reach {
+  width: 90%;
+margin: 0 auto;
+margin-top: 2em;
+}
+/* .REACH_INPUT {
+  padding: 0em 2em;
+} */
+
+/* .container-reach {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -551,7 +584,7 @@ transform: translateX(70px);
 .container-reach:hover {
     position: relative;
     animation: fall 2s ease-in-out infinite;
-  }
+  } */
   
   @keyframes fall {
     0% {
@@ -566,8 +599,12 @@ transform: translateX(70px);
   }
   
 .REACH_INPUT main {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
 }
 
 .overlay {
@@ -581,21 +618,17 @@ transform: translateX(70px);
     z-index: 1;
     position: fixed;
     display: none;
-  }
+  } 
   .message_reach {
-    width: 100%;
+    width: 90%;
   }
   .btn-reach-out {
     /* position: absolute; */
     float: right;
     display: flex;
-    justify-content: end;
-    align-items: end;
-    position: unset;
-top: 0;
-left: 0;
-transform: translateY(-60px);
-margin-right: 1em;
+    justify-self: end;
+    align-self: end;
+float: right;
   }
 
 
@@ -615,12 +648,12 @@ margin-right: 1em;
     position: relative;
   }
    */
-  .REACH-OUT-NOW {
+  /* .REACH-OUT-NOW {
     animation: falling 0.2s linear ;
     transition: transform 0.5s;
     position: fixed;
     top: 0;
-    margin-top: 150px;
+    /* margin-top: 150px;
     z-index: 10;
     display: none;
     
@@ -633,7 +666,7 @@ margin-right: 1em;
     100% {
       transform: translateY(100%);
     }
-  }
+  } */
   
 .send_of_contact {
   position: relative;
@@ -642,10 +675,20 @@ margin-right: 1em;
 
   .contact_send {
     float: right;
-    margin-right: 15.9em;
+    margin-right: 5%;
     position: absolute;
     top: -60px;
     right: 0;
+    margin-right: 1.5em;
+  }
+  .input-contact main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .send_of_contact {
+    align-self: flex-end;
   }
   @media only screen and (max-width: 1250px) {
     .contact_send {
@@ -655,7 +698,7 @@ margin-right: 1em;
   padding: 1em 2em;
   color: var(--grey3);
   position: absolute;
-  margin-right: 12em;
+  margin-right: 1.5em;
   cursor: pointer;
   }
   .daniel_Image {
@@ -664,9 +707,9 @@ margin-right: 1em;
 .daniel_Image  {
   width: 100%;
 }
-.contact_socials {
+/* .contact_socials {
   margin-right: 10em;
-}
+} */
 .hero1 {
     
   margin-top: 7em;
@@ -710,7 +753,7 @@ margin-right: 1em;
   display: flex;
   gap: 150px;
   margin-top: 4em;
-  margin-right: 2em   ;
+  margin-right: 2em;
 }
 .projects {
   margin-top: 7em;
@@ -725,24 +768,24 @@ margin-right: 1em;
 }
 .contact {
   margin-top: 8em;
-  margin-left: 5rem;
-  margin-right: 0rem;
+  /* margin-left: 5rem;
+  margin-right: 0rem; */
 }
 .message {
   width: 90%;
 }
-.send_input {
+/* .send_input {
   float: right;
   display: flex;
   justify-content: end;
   align-items: end;
-  position: unset;
+
   top: 0;
   left: 0;
-  /* transform: translateY(0px); */
-  margin-right: 12%;
+  transform: translateY(-60px);
+z-index: -10;
 
-}
+} */
 .socials {
   display: flex;
   flex-direction: row;
@@ -752,6 +795,12 @@ margin-right: 1em;
   margin-right: 0em;
   
   }
+  /* .btn-send {
+    align-self: flex-end;
+    justify-self: end;
+    margin-right: 2.4em;
+    transform: translateY(-3.3em);
+  } */
   }
   
   @media only screen and (max-width: 1050px) {
@@ -759,7 +808,8 @@ margin-right: 1em;
       color: var(--grey-2, #818181);
   font-size: 20px;
   font-family: Jost;
-  line-height: 20px;
+  line-height: 25px;
+  margin-bottom: 2em;
   }
   .hero1 h1 {
     color: var(--white);
@@ -843,6 +893,7 @@ margin-right: 1em;
 }
 .projects {
   margin: 6em 1em;
+  margin-bottom: 0em;
 }
 .services {
   margin: 6em 1em;
@@ -851,10 +902,19 @@ margin-right: 1em;
   width: 90%;
 }
 .REACH_INPUT textarea {
-  width: 100%;
+  width: 90%;
 }
 .btn-reach-out {
   margin-right: 1em;
+}
+
+.btn-send-reach {
+  margin-right: 4%;
+}
+.contact {
+  margin-top: 8em;
+  margin-right: 6em;
+  margin-left: 6em;
 }
   }
   @media only screen and (max-width: 600px)  {
@@ -944,9 +1004,9 @@ display: block;
 .headerskills h1 {
   font-size: 24px;
 }
-.REACH-OUT-NOW {
+/* .REACH-OUT-NOW {
   margin-top: 100px;
-}
+} */
   }
 
   @media only screen and (max-width: 460px)  {
@@ -978,7 +1038,7 @@ justify-content: space-around;
 flex-direction: row;
   margin-right: 0em;
   margin: 3em;
- 
+ margin-bottom: 0em;
 }
 .contact_socials a {
   margin-right: 0em;
@@ -995,9 +1055,9 @@ margin-left: 2em;
 .header-contact h1 {
   font-size: 24px;
 }
-.REACH-OUT-NOW {
+/* .REACH-OUT-NOW {
   margin-top: 100px;
-}
+} */
   }
   @media only screen and (max-width: 375px) {
     .hero1 h1 {
