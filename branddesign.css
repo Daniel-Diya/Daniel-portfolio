@@ -1,0 +1,12 @@
+.branddesign-see-more h1 {
+    color: var(--white);
+    color: var(--google-border-color, #DADCE0);
+font-family: Jost;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+padding-top: 2em;
+float: right;
+justify-content: end;
+}
