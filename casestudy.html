@@ -24,7 +24,7 @@
         <nav class="navbar">
           <!-- navbar -->
           <div class="logo">
-            <img src="Union (3).svg" alt="logo daniel" />
+           <a href="index.html#Home"> <img src="Union (3).svg" alt="logo daniel" /></a>
           </div>
 
           <div class="header__main-ham-menu-cont">
@@ -36,17 +36,17 @@
             <img
               src="ham-menu-close.svg"
               alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
+              class="header__main-ham-menu-close d-none hidden"
             />
           </div>
 
           <div class="links_item">
             <ul class="listed_item">
-              <li><a class="navlinks ActiveNav" href="#Home">Home</a></li>
+              <li><a class="navlinks ActiveNav" href="index.htm#Home">Home</a></li>
               <!-- <li><a class="navlinks" href="#skills">Skills</a></li> -->
-              <li><a class="navlinks" href="#projects">Projects</a></li>
+              <li><a class="navlinks" href="index.html#projects">Projects</a></li>
               <!-- <li><a class="navlinks" href="#services">Services</a></li> -->
-              <li><a class="navlinks" href="#contact">Contact</a></li>
+              <li><a class="navlinks" href="index.html#contact">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -169,7 +169,47 @@ the_more.style.display = 'none'
      third.style.display = 'none'
        fourth.style.display = 'none'
       })
+  
+
+
+
+
+      const hamburger = document.querySelector(".header__main-ham-menu");
+const close = document.querySelector(".header__main-ham-menu-close");
+const links = document.querySelector(".links_item");
+
+hamburger.addEventListener('click', function(){
+  close.style.display = "block";
+links.classList.add('listed')
+hamburger.style.opacity = '0'
+hamburger.classList.add('hidden')
+
+})
+close.addEventListener('click', function(){
+    links.classList.remove('listed')
+    close.style.display = "none";
+    hamburger.style.opacity = '1'
+    hamburger.classList.remove('hidden')
+})
+
+const navlinks = document.querySelectorAll(".navlinks");
+console.log(
+  navlinks.forEach((navs) => {
+    navs.addEventListener("click", function () {
+      close.style.display = "none";
+      links.classList.remove('listed')
+      hamburger.style.opacity = '1'
+      hamburger.classList.remove('hidden')
+      navlinks.forEach((navs) => {
+        navs.classList.remove("ActiveNav");
+      });
+      navs.classList.add("ActiveNav");
+    });
+  })
+);
+
 
     </script>
+    <script src="case.js"></script>
   </body>
 </html>

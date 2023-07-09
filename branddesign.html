@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="branddesign.css" />
     <link rel="shortcut icon" type="image/png" href="Union (3).svg" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-          <!-- Link Swiper's CSS -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="WholeBody">
@@ -22,7 +22,9 @@
         <nav class="navbar">
           <!-- navbar -->
           <div class="logo">
-            <img src="Union (3).svg" alt="logo daniel" />
+            <a href="index.html#Home">
+              <img src="Union (3).svg" alt="logo daniel"
+            /></a>
           </div>
 
           <div class="header__main-ham-menu-cont">
@@ -119,7 +121,10 @@
                 <p>Business Growth | Startup Scaler</p>
               </div>
             </div>
-            <div class="case-study1 branddesign1 swiper-slide third hidden" style="display: none;">
+            <div
+              class="case-study1 branddesign1 swiper-slide third hidden"
+              style="display: none"
+            >
               <img src="Component 23.svg" alt="casestudy" />
               <div class="about-case-study1 about-branddesign1">
                 <h1>
@@ -150,7 +155,10 @@
                 <p>Portfolio | Open Source | CV builder</p>
               </div>
             </div>
-            <div class="case-study1 branddesign1 swiper-slide fourth hidden" style="display: none;">
+            <div
+              class="case-study1 branddesign1 swiper-slide fourth hidden"
+              style="display: none"
+            >
               <img src="Component 23.svg" alt="casestudy" />
               <div class="about-case-study1 about-branddesign1">
                 <h1>U-com</h1>
@@ -160,13 +168,17 @@
           </div>
         </div>
 
-        <div class="branddesign-see-more MORE" style="margin-top: 3em;">
+        <div class="branddesign-see-more MORE" style="margin-top: 3em">
           <h1>
             See <span class="brand-design_see_brand-design"> More</span>
             <img src="/Vector.svg" alt="" />
           </h1>
         </div>
-        <div class="branddesign-see-more LESS" style="display: none" style="margin-top: 3em;">
+        <div
+          class="branddesign-see-more LESS"
+          style="display: none"
+          style="margin-top: 3em"
+        >
           <h1>
             See <span class="brand-design_see_brand-design"> Less</span>
             <svg
@@ -189,11 +201,9 @@
       </div>
       <div class="copywright">
         <p>© DIYADANIEL 2023</p>
-
-        
       </div>
     </div>
-
+    <!-- <script src="script.js"></script> -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -212,43 +222,85 @@
         keyboard: true,
 
         breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-          },
-        },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+    },
+
+
       });
 
-      const see_more = document.querySelector(".case-study-see-more");
-      const the_more = document.querySelector(".MORE");
-      const the_less = document.querySelector(".LESS");
-
-      const arrow = document.querySelector(".img-arrow");
-      const less = document.querySelector(".img-arrow-less");
-      const third = document.querySelector(".third");
-      const fourth = document.querySelector(".fourth");
+      const see_more = document.querySelector('.case-study-see-more')
+      const the_more = document.querySelector('.MORE')
+      const the_less = document.querySelector('.LESS')
+   
+      const arrow = document.querySelector('.img-arrow')
+      const less = document.querySelector('.img-arrow-less')
+      const third = document.querySelector('.third')
+      const fourth = document.querySelector('.fourth')
       console.log(see_more);
-      the_more.addEventListener("click", function () {
-        the_more.style.display = "none";
-        the_less.style.display = "block";
-        third.style.display = "block";
-        fourth.style.display = "block";
-      });
+      the_more.addEventListener('click', function(){
+the_more.style.display = 'none'
+     the_less.style.display = 'block'
+     third.style.display = 'block'
+       fourth.style.display = 'block'
+       
+      })
 
-      the_less.addEventListener("click", function () {
-        the_more.style.display = "block";
-        the_less.style.display = "none";
-        third.style.display = "none";
-        fourth.style.display = "none";
+      the_less.addEventListener('click', function(){
+        the_more.style.display = 'block'
+     the_less.style.display = 'none'
+     third.style.display = 'none'
+       fourth.style.display = 'none'
+      })
+  
+
+
+
+
+      const hamburger = document.querySelector(".header__main-ham-menu");
+const close = document.querySelector(".header__main-ham-menu-close");
+const links = document.querySelector(".links_item");
+
+hamburger.addEventListener('click', function(){
+  close.style.display = "block";
+links.classList.add('listed')
+hamburger.style.opacity = '0'
+hamburger.classList.add('hidden')
+
+})
+close.addEventListener('click', function(){
+    links.classList.remove('listed')
+    close.style.display = "none";
+    hamburger.style.opacity = '1'
+    hamburger.classList.remove('hidden')
+})
+
+const navlinks = document.querySelectorAll(".navlinks");
+console.log(
+  navlinks.forEach((navs) => {
+    navs.addEventListener("click", function () {
+      close.style.display = "none";
+      links.classList.remove('listed')
+      hamburger.style.opacity = '1'
+      hamburger.classList.remove('hidden')
+      navlinks.forEach((navs) => {
+        navs.classList.remove("ActiveNav");
       });
+      navs.classList.add("ActiveNav");
+    });
+  })
+);
+
     </script>
   </body>
 </html>

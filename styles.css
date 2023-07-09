@@ -19,9 +19,16 @@
 }
 html {
   scroll-behavior: smooth;
+ height: 100%;
+}
+body{
+  background-color: var(--background);
+  height: 100%;
 }
 .WholeBody {
     background-color: var(--background);
+    padding: 0em 10.2em;
+    
 }
 .navlinks {
   text-decoration: none;
@@ -37,9 +44,9 @@ font-weight: 600;
 
 
 }
-.navlinks:hover{
-    color: var(--blue);
-}
+/* .navlinks:hover{
+    color: white;
+} */
 ul li {
   display: flex;
   justify-content: space-around;
@@ -55,8 +62,33 @@ ul li {
   display: none;
   margin-right: 2em;
       margin-top: 0.5em;
-      z-index: 10000;
-}
+      z-index: 10;
+      animation: slide-in 1s forwards;
+    }
+    
+    
+    
+    @keyframes slide-in {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 0%;
+      }
+    }
+
+
+    /* animation: slide-out 1s forwards;
+  }
+  
+  @keyframes slide-out {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -100%;
+    }
+  } */
 .header__main-ham-menu {
   display: none;
 }
@@ -71,10 +103,12 @@ top: 0;
   left: 0;
   width: 100%;
   background-color: var(--background);
+  padding: 0em 10.2em;
+  padding-top: 2em;
 }
-.logo img {
+/* .logo img {
   margin-left: 5em;
-}
+} */
 
 .listed_item {
   display: flex;
@@ -83,13 +117,12 @@ top: 0;
   align-items: center;
   margin-top: 0.5em;
 }
-.links_item {
+/* .links_item {
     padding-right: 5em;
-}
+} */
 /* javascript activelink */
 .ActiveNav {
-    color: var(--blue);
-    border-bottom: 2px solid var(--blue);
+  color: white;
 }
 
 
@@ -99,14 +132,13 @@ top: 0;
 .Hero {
     display: flex;
     justify-content: space-around;
-    margin-top: 1em;
+    margin-top: 0em;
+    padding-top: 5em;
     /* margin: 0em 10em; */
 }
 .daniel_Image {
     width: 100%;
-    margin-right: 8rem;
-    margin-top: 7rem;
-    
+    margin-top: 5rem;
 }
 
 /* .daniel_Image {
@@ -124,8 +156,8 @@ top: 0;
 .hero1 {
     
     margin-top: 7em;
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 6rem;
+
     /* align-items: center; */
 }
 .hero1 h1 {
@@ -156,7 +188,7 @@ line-height: 36px;
     background-color: var(--blue);
     border: 2px solid var(--blue);
     border-radius: 10px;
-padding: 0.5rem 2.5rem;
+padding: 1.06rem 2rem;
 color: var(--grey-3, #D4D4D4);
 font-size: 15px;
 font-family: Jost;
@@ -170,6 +202,9 @@ font-weight: 700;
 .ButtonReach button:hover {
     animation: bounce 1s 1;
   color: white;
+}
+.navbar {
+  z-index: 10;
 }
 
 @keyframes bounce {
@@ -197,7 +232,7 @@ text-decoration: none;
     background-color: var(--backgroundinput);
     border: 2px solid var(--blue);
     border-radius: 10px;
-padding: 0.5rem 2.5rem;
+    padding: 1.06rem 2rem;
 color: var(--grey-3, #D4D4D4);
 font-size: 15px;
 font-family: Jost;
@@ -290,8 +325,8 @@ line-height: 26px;
 
 .projects {
     margin-top: 8em;
-    margin-left: 12rem;
-    margin-right: 5rem;
+    /* margin-left: 12rem;
+    margin-right: 5rem; */
 }
 .headerprojects {
     margin-bottom: 3.5em;
@@ -322,7 +357,7 @@ font-weight: 300;
 .the-projects {
     display: flex;
     justify-content: space-between;
-gap: 50px;
+gap: 75px;
 width: 100%;
 }
 
@@ -414,8 +449,8 @@ margin-right: 5em;
 
 .projects {
   margin-top: 8em;
-  margin-left: 12rem;
-  margin-right: 5rem;
+  /* margin-left: 12rem;
+  margin-right: 5rem; */
 }
 /* c
 ontact */
@@ -423,8 +458,8 @@ ontact */
     margin-top: 8em;
     /* margin-left: 12rem;
     margin-right: 5rem; */
-    margin-right: 10em;
-    margin-left: 10em;
+    /* margin-right: 10em;
+    margin-left: 10em; */
 }
 
 .message {
@@ -443,6 +478,7 @@ font-weight: 300;
 }
 .contact_message {
   width: 100%;
+  margin-top: 1em;
 }
 .input-contact::placeholder {
     color: #B8B8B8;
@@ -562,7 +598,7 @@ margin-top: 0EM;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-z-index: 100;
+z-index: 101;
 position: fixed;
 display: none;
 } 
@@ -616,7 +652,7 @@ margin-top: 2em;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(1px);
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     display: none;
   } 
@@ -641,7 +677,9 @@ float: right;
 .LESS {
   display: none;
 }
-
+.hidden {
+  display: none;
+}
 /* 
   .REACH-OUT-NOW {
    
@@ -691,6 +729,83 @@ float: right;
   .send_of_contact {
     align-self: flex-end;
   }
+
+
+  
+ textarea
+ {
+  resize: none;
+ }
+ input:focus{
+  outline: none;
+ }
+ textarea:focus {
+  outline: none;
+ }
+
+
+ .contact__form-input {
+  color: #333;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  font-size: 1.6rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 600;
+  /* Code for Modern Browsers */
+  /* Code for WebKit, Blink, Edge */
+  /* Code for Internet Explorer 10-11 */
+  /* Code for Microsoft Edge */
+  /* Code for Mozilla Firefox 4 to 18 */
+  /* Code for Mozilla Firefox 19+ */ }
+  .contact_message::placeholder {
+    color: red;
+    font-weight: 600;
+    font-size: 1.6rem;
+   }
+.input_form {
+  background-color: var(--backgroundinput);
+  border: 2px solid var(--backgroundinput);
+  width: 100%;
+  padding: 1em 1em;
+  border-radius: 12px;
+  border: 2px solid #2D4753;
+  background: #0C222D;
+  margin-top: 1em ;
+  color: #B8B8B8;
+  font-size: 18px;
+  font-family: Jost;
+  font-weight: 300;
+}
+.text {
+  margin-right: 1em;
+}
+.form_input {
+  display: flex;
+}
+
+.DIYADANIEL {
+  
+  color: #FFF;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 3em;
+}
+.socials_contact a {
+  background-color: var(--backgroundinput);
+}
+.project1 {
+  z-index: 1;
+}
+.img_project {
+  z-index: 0;
+}
+
   @media only screen and (max-width: 1250px) {
     .contact_send {
       border-radius: 6px;
@@ -702,9 +817,9 @@ float: right;
   margin-right: 1.5em;
   cursor: pointer;
   }
-  .daniel_Image {
+  /* .daniel_Image {
     margin-right: 4rem; 
-}
+} */
 .daniel_Image  {
   width: 100%;
 }
@@ -715,9 +830,18 @@ float: right;
     
   margin-top: 7em;
   margin-right: 2rem;
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   /* align-items: center; */
 }
+.WholeBody {
+  background-color: var(--background);
+  padding: 0em 8.2em;
+}
+.navbar{
+  padding: 2em 8.2em;
+}
+
+
   }
   @media only screen and (max-width: 1070px) {
     .ButtonReach button {
@@ -758,8 +882,8 @@ float: right;
 }
 .projects {
   margin-top: 7em;
-  margin-left: 5rem;
-  margin-right: 2rem;
+  /* margin-left: 5rem;
+  margin-right: 2rem; */
 }
 .services {
   
@@ -802,6 +926,13 @@ z-index: -10;
     margin-right: 2.4em;
     transform: translateY(-3.3em);
   } */
+  .WholeBody {
+    background-color: var(--background);
+    padding: 0em 6.2em;
+  }
+  .navbar{
+    padding: 2em 6.2em;
+  }
   }
   
   @media only screen and (max-width: 1050px) {
@@ -826,7 +957,13 @@ padding-bottom: 1rem;
 .daniel_Image {
 width: 100%;
 }
-
+.WholeBody {
+  background-color: var(--background);
+  padding: 0em 3.2em;
+}
+.navbar{
+  padding: 2em 3.2em;
+}
   }
   @media only screen and (max-width: 970px) {
     .Hero {
@@ -905,6 +1042,7 @@ margin-right: 1em;
 .REACH_INPUT textarea {
   width: 90%;
 }
+
 .btn-reach-out {
   margin-right: 1em;
 }
@@ -951,13 +1089,11 @@ margin-right: 1em;
       z-index: 10000;
     }
     .header__main-ham-menu-cont {
-      display: block;
+
       z-index: 1000;
       cursor: pointer;
     }
-.header__main-ham-menu{
-display: block;
-} 
+
 .logo img {
   margin-left: 2em;
 }
@@ -965,23 +1101,47 @@ display: block;
   position: absolute;
   top:  0;
   right: 0px; /* Offscreen initially */
-  width: 50%;
+  width: 70%;
   height: 100vh;
   background-color: var(--background);
   transition: right 0.3s;
  z-index: 100;
  display: none;
 }
+.listed {
+  position: absolute;
+  top:  0;
+  right: 0px; /* Offscreen initially */
+  width: 70%;
+  height: 100vh;
+  background-color: var(--background);
+  transition: right 0.3s;
+ z-index: 100;
+ display: block;
+ animation: slide-in 1s forwards;
+}
+
+
+
+@keyframes slide-in {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
 .links_item ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: end;
+  justify-content: start;
+  text-align: start;
   z-index: 100;
   
 }
 .links_item ul li {
-  margin: 3em;  
+  margin: 1em;  
+  margin-left: 1em;
 }
 .links_item ul li:first-child {
   margin-top: 2em;
@@ -1011,6 +1171,16 @@ display: block;
   }
 
   @media only screen and (max-width: 460px)  {
+    .WholeBody {
+      background-color: var(--background);
+      padding: 0em 1.2em;
+    }
+    .navbar{
+      padding: 2em 0.2em;
+    }
+    .hero1 {
+      margin-top: 2em;
+    }
 .btnreach_Cv {
   display: flex;
   flex-direction: column;
@@ -1059,6 +1229,14 @@ margin-left: 2em;
 /* .REACH-OUT-NOW {
   margin-top: 100px;
 } */
+.the-projects {
+  display: flex;
+  flex-direction: column;
+}
+.form_input {
+  display: flex;
+  flex-direction: column;
+}
   }
   @media only screen and (max-width: 375px) {
     .hero1 h1 {
@@ -1080,7 +1258,3 @@ line-height: 28px;
     }
 
   }
- textarea
- {
-  resize: none;
- }

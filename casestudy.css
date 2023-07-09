@@ -1,6 +1,9 @@
 .case-study {
-    padding: 10em 5em;
+ padding-top: 10em;
     width: 100%;
+}
+.hidden {
+  display: none;
 }
 .header-casestudy h1 {
     color: var(--white, #FFF);
@@ -57,7 +60,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 26px;
-padding-top: 2em;
+
 float: right;
 justify-content: end;
 }
@@ -70,6 +73,7 @@ font-weight: 300;
 line-height: normal;
 text-align: center;
 padding-bottom: 2em;
+padding-top: 5em;
 }
 .case-study1 img {
 width: 100%;
@@ -86,7 +90,7 @@ width: 100%;
       }
   
       body {
-        background: #eee;
+        /* background: #eee; */
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #000;
