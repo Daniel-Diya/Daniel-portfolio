@@ -188,6 +188,7 @@ font-weight: 700;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 3em;
   }
   .btnreach_Cv a{
 text-decoration: none;
@@ -980,7 +981,7 @@ display: block;
   
 }
 .links_item ul li {
-  margin: 3em;
+  margin: 3em;  
 }
 .links_item ul li:first-child {
   margin-top: 2em;

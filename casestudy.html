@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="casestudy.css" />
     <link rel="shortcut icon" type="image/png" href="Union (3).svg" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- Link Swiper's CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
   </head>
+
+
+
   <body>
     <div class="WholeBody">
       <header>
@@ -49,45 +57,119 @@
           <h1>Case Studies</h1>
           <p>Here are some of the projects i have worked on over the years</p>
         </div>
-        <div class="the-case-study">
-          <div class="case-study1">
-            <img src="Component 23.svg" alt="casestudy" />
-            <div class="about-case-study1">
-              <h1>Telidoc</h1>
-              <p>Telemedicine | User Research | Information Architecture</p>
+        <div class="swiper mySwiper">
+          <div class="the-case-study swiper-wrapper">
+            <div class="case-study1 swiper-slide">
+              <img src="Component 23.svg" alt="casestudy" />
+              <div class="about-case-study1">
+                <h1>Telidoc</h1>
+                <p>Telemedicine | User Research | Information Architecture</p>
+              </div>
             </div>
-          </div>
-          <div class="case-study1">
-            <img src="Component 23.svg" alt="casestudy" />
-            <div class="about-case-study1">
-              <h1>Quidroo</h1>
-              <p>Telemedicine | User Research | Information Architecture</p>
-              <a href="https://quidroo.com">https://quidroo.com</a>
+            <div class="case-study1 swiper-slide">
+              <img src="Component 23.svg" alt="casestudy" />
+              <div class="about-case-study1">
+                <h1>Quidroo</h1>
+                <p>Telemedicine | User Research | Information Architecture</p>
+                <a href="https://quidroo.com">https://quidroo.com</a>
+              </div>
             </div>
-          </div>
-          <div class="case-study1">
-            <img src="Component 23.svg" alt="casestudy" />
-            <div class="about-case-study1">
-              <h1>Telidoc</h1>
-              <p>Telemedicine | User Research | Information Architecture</p>
+            <div class="case-study1 swiper-slide third hidden" style="display: none;">
+              <img src="Component 23.svg" alt="casestudy" />
+              <div class="about-case-study1">
+                <h1>Telidoc</h1>
+                <p>Telemedicine | User Research | Information Architecture</p>
+              </div>
             </div>
-          </div>
-          <div class="case-study1">
-            <img src="Component 23.svg" alt="casestudy" />
-            <div class="about-case-study1">
-              <h1>Telidoc</h1>
-              <p>Telemedicine | User Research | Information Architecture</p>
+            <div class="case-study1 swiper-slide fourth hidden " style="display: none;">
+              <img src="Component 23.svg" alt="casestudy" />
+              <div class="about-case-study1">
+                <h1>Telidoc</h1>
+                <p>Telemedicine | User Research | Information Architecture</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="case-study-see-more">
-            <h1>See  <span class="case-study-see_case-study"> More</span><img src="/Vector.svg" alt=""></h1>
+        <div class="case-study-see-more  MORE" style="display: block;">
+          <h1>
+            See <span class="case-study-see_case-study"> More</span>
+             <img class="img-arrow" src="/Vector.svg" alt="" />
+          </h1>
+        </div>
+        <div class="case-study-see-more LESS" style="display: none;">
+          <h1>
+            See <span class="case-study-see_case-study"> Less</span>
+              <svg  class="img-arrow-less"   xmlns="http://www.w3.org/2000/svg" width="32" height="10" viewBox="0 0 32 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.65235 0.838815V4.13225L32 4.13225V5.46724L5.65235 5.46724V9.16113L0 4.88874L5.65235 0.838815Z" fill="#DADCE0"/>
+              </svg>
+              
+          </h1>
         </div>
       </div>
       <div class="copywright">
         <p>© DIYADANIEL 2023</p>
       </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+
+        breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+    },
+
+
+      });
+
+      const see_more = document.querySelector('.case-study-see-more')
+      const the_more = document.querySelector('.MORE')
+      const the_less = document.querySelector('.LESS')
+   
+      const arrow = document.querySelector('.img-arrow')
+      const less = document.querySelector('.img-arrow-less')
+      const third = document.querySelector('.third')
+      const fourth = document.querySelector('.fourth')
+      console.log(see_more);
+      the_more.addEventListener('click', function(){
+the_more.style.display = 'none'
+     the_less.style.display = 'block'
+     third.style.display = 'block'
+       fourth.style.display = 'block'
+       
+      })
+
+      the_less.addEventListener('click', function(){
+        the_more.style.display = 'block'
+     the_less.style.display = 'none'
+     third.style.display = 'none'
+       fourth.style.display = 'none'
+      })
+
+    </script>
   </body>
 </html>
