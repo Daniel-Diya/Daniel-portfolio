@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="Union (3).svg" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -24,9 +25,8 @@
         <nav class="navbar">
           <!-- navbar -->
           <div class="logo">
-           <a href="index.html#Home"> <img src="Union (3).svg" alt="logo daniel" /></a>
+           <a href="index.html#Home">            <img src="DIYADANIEL Logo 1.svg" alt="logo daniel" /></a>
           </div>
-
           <div class="header__main-ham-menu-cont">
             <img
               src="ham-menu.svg"
@@ -53,13 +53,13 @@
       </header>
 
       <div class="case-study">
-        <div class="header-casestudy">
+        <div class="header-casestudy" data-aos="fade-down">
           <h1>Case Studies</h1>
           <p>Here are some of the projects i have worked on over the years</p>
         </div>
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-right">
           <div class="the-case-study swiper-wrapper">
-            <div class="case-study1 swiper-slide">
+            <div class="case-study1 swiper-slide" data-aos="fade-right">
               <img src="Component 23.svg" alt="casestudy" />
               <div class="about-case-study1">
                 <h1>Telidoc</h1>
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="case-study-see-more  MORE" style="display: block;">
+        <div class="case-study-see-more  MORE" style="display: block;" >
           <h1>
             See <span class="case-study-see_case-study"> More</span>
              <img class="img-arrow" src="/Vector.svg" alt="" />
@@ -106,7 +106,7 @@
           </h1>
         </div>
       </div>
-      <div class="copywright">
+      <div class="copywright" data-aos="fade-down">
         <p>© DIYADANIEL 2023</p>
       </div>
     </div>
@@ -211,5 +211,14 @@ console.log(
 
     </script>
     <script src="case.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+    once: false, 
+    delay: 0,
+  
+  });
+</script>
   </body>
 </html>

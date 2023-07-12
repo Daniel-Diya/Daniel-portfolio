@@ -141,6 +141,7 @@ top: 0;
     margin-top: 5rem;
 }
 
+
 /* .daniel_Image {
     animation: rotate 5s linear infinite;
   }
@@ -177,7 +178,7 @@ padding-bottom: 2rem;
 }
 .AboutDaniel {
     color: var(--grey-2, #818181);
-font-size: 20px;
+font-size: 18px;
 font-family: Jost;
 line-height: 36px;
 }
@@ -188,7 +189,7 @@ line-height: 36px;
     background-color: var(--blue);
     border: 2px solid var(--blue);
     border-radius: 10px;
-padding: 1.06rem 2rem;
+padding: 0.8rem 2rem;
 color: var(--grey-3, #D4D4D4);
 font-size: 15px;
 font-family: Jost;
@@ -232,7 +233,7 @@ text-decoration: none;
     background-color: var(--backgroundinput);
     border: 2px solid var(--blue);
     border-radius: 10px;
-    padding: 1.06rem 2rem;
+    padding: 0.8rem 2rem;
 color: var(--grey-3, #D4D4D4);
 font-size: 15px;
 font-family: Jost;
@@ -805,6 +806,16 @@ float: right;
 .img_project {
   z-index: 0;
 }
+@media   (max-width: 1370px){
+  .WholeBody {
+    background-color: var(--background);
+    padding: 0em 5.2em;
+  }
+  .navbar{
+    padding: 2em 5.2em;
+  }
+}
+  
 
   @media only screen and (max-width: 1250px) {
     .contact_send {
@@ -835,10 +846,10 @@ float: right;
 }
 .WholeBody {
   background-color: var(--background);
-  padding: 0em 8.2em;
+  padding: 0em 3.2em;
 }
 .navbar{
-  padding: 2em 8.2em;
+  padding: 2em 3.2em;
 }
 
 
@@ -848,7 +859,7 @@ float: right;
       background-color: var(--blue);
       border: 2px solid var(--blue);
       border-radius: 10px;
-  padding: 0.5rem 0.5rem;
+ 
   color: var(--grey-3, #D4D4D4);
   font-size: 15px;
   font-family: Jost;
@@ -928,17 +939,17 @@ z-index: -10;
   } */
   .WholeBody {
     background-color: var(--background);
-    padding: 0em 6.2em;
+    padding: 0em 3.2em;
   }
   .navbar{
-    padding: 2em 6.2em;
+    padding: 2em 3.2em;
   }
   }
   
   @media only screen and (max-width: 1050px) {
     .AboutDaniel {
       color: var(--grey-2, #818181);
-  font-size: 20px;
+  font-size: 18px;
   font-family: Jost;
   line-height: 25px;
   margin-bottom: 2em;
