@@ -61,7 +61,7 @@ ul li {
 .header__main-ham-menu-close {
   display: none;
   margin-right: 2em;
-      margin-top: 0.5em;
+      margin-top: 0em;
       z-index: 10;
       animation: slide-in 1s forwards;
     }
@@ -1096,7 +1096,7 @@ margin-right: 1em;
     .header__main-ham-menu {
       display: block;
       margin-right: 2em;
-      margin-top: 0.5em;
+      margin-top: 0em;
       z-index: 10000;
     }
     .header__main-ham-menu-cont {
