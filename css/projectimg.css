@@ -28,7 +28,7 @@
     /* height: 99%; */
     height: 100%;
     border-radius: 2px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(#00000099, #00000099);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
